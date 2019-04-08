@@ -1,3 +1,9 @@
+Repo de Anne-Tahina Metz 
+Oui, j'ai galéré comme un petit caca ;)
+
+
+
+
 Small exercices in Ruby -- RSpec 3 Edition
 ==========
 
