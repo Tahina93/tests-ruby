@@ -1,3 +1,10 @@
+
+#-------- CETTE PARTIE -------------
+
+#Cette partie me permettait de résoudre les problèmes jusqu'a ce qu'il y ai 2 mots dans le tring.
+#Je l'ai trouvée sur StackOverflow : https://stackoverflow.com/questions/44244478/ruby-multiple-words-pig-latin. 
+
+
 #def translate(string)
 #  pig_string = ''
 #   if string[0] =~ /[aeiou]/
@@ -9,63 +16,59 @@
 #   else
 #       return string[0] + string + 'ay'
 #   end
-#end
+#end 
 
-#def translate_words(multi_words)
- #   word_count = multi_words.split.size
-  #  if word_count > 1
-   #     multi_words.map! do |word|
-    #        translate(word)
-     #   end
-   # end
-#end
-
-#end
+#-------------------------------------------------------------------------
 #
 #
+#--------------- CETTE PARTIE ---------------------------
+#
+#Je l'ai trouvée sur https://repl.it/@ikaur/04-Pig-Latin-Ruby
+#Tout y est expliqué. Merci à cette personne extrêmement généreuse, elle à sûrement sauvé ma sentée mentale.
+
 def translate(str)
-    # Vowels to consider
+    # voyelles à considérer
     vowels = ["a", "e", "i", "o", "u"]
     
-    # Special cases to consider
+    # caractère spéciaux
     two_letter_consonants = ["ch", "sh", "qu", "th", "br"]
     three_letter_consonants = ["thr", "sch", "squ"]
 
-    # Seperate each word from the phrase given
+    # Création d'array pour séparer chaque mots de la phrase.
     words = str.split(" ")
     
-    #Location for processed words
+    #Array une fois que les pots ont été modifiés.
     result = [];
     
     
     
     words.each do |word|
-        # Words that start with a vowels
+        # Mots qui commencent par des voyelles
         if vowels.include? word[0]
             result.push word << 'ay'
             
-        # Words that start with a consonant
+        # Mots qui commencent par des consonnes.
         else
             # Check for special consonants
             if three_letter_consonants.include? word[0] + word[1] + word[2]
-                # Slice off first three letters
+                # séparer les 3 premières lettres.
                 first_three_letters = word.slice!(0,3)
                 
-                # Add letters to end of word with 'ay'
+                # ajout des 3 lettres à la fin juste avant 'ay'
                 result.push word << first_three_letters << 'ay'
                 
             elsif  two_letter_consonants.include? word[0] + word[1]
-                # Slice off first two letters
+                # séparer les 2 premières lettres
                 first_two_letters = word.slice!(0,2)
                 
-                # Add the letters to end of word with 'ay'
+                # ajout des deux lettre à la fin juste avant 'ay'
                 result.push word << first_two_letters << 'ay'
                 
             else
-                # Slice off first letter...
+                # séparer la première lettre
                 first_letter = word.slice!(0)
                 
-                # Add first letter to end of word with 'ay'
+                # ajout de la première lettre à la fin pour finir par 'ay'
                 result.push word << first_letter << 'ay'
             end #End of special consonant check
     
@@ -77,7 +80,7 @@ def translate(str)
     
     
     
-    #Present the processed words as a single string
-    return result.join(" ")
+    
+    return result.join(" ") #tout remettre dans un seul string
 
-end #End of translate function
+end 
