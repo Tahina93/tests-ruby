@@ -24,7 +24,7 @@
 #--------------- CETTE PARTIE ---------------------------
 #
 #Je l'ai trouvée sur https://repl.it/@ikaur/04-Pig-Latin-Ruby
-#Tout y est expliqué. Merci à cette personne extrêmement généreuse, elle à sûrement sauvé ma sentée mentale.
+#Tout y est expliqué. Merci à cette personne extrêmement généreuse, elle à sûrement sauvé ma santée mentale.
 
 def translate(str)
     # voyelles à considérer
