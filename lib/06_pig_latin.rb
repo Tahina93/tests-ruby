@@ -84,3 +84,9 @@ def translate(str)
     return result.join(" ") #tout remettre dans un seul string
 
 end 
+
+
+
+
+#------------------ UN AUTRE GRAS BIEN QUI A EU PEUR QU'ON SE SUICIDE ------------
+#https://medium.com/@c.emily.collins/translating-to-pig-latin-with-ruby-f4e8e91d927e
