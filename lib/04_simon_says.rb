@@ -37,7 +37,7 @@ def titleize(string)
 	end
 
 	string = string.join(" ") #Reformer le string a partir du tableau des mot découpés en ajoutant un espace entre les mots.
-	string = string[0].upcase #Ne pas oublié que la première lettre de la phrase doit être écrite en majuscule.A reprendre. Car là il ne prend en compte que la première lettre de tout le string et efface le reste. 
+	#string = string[0].upcase #Ne pas oublié que la première lettre de la phrase doit être écrite en majuscule.A reprendre. Car là il ne prend en compte que la première lettre de tout le string et efface le reste. 
 
 
 end
